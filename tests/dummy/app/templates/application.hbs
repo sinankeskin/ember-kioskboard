@@ -1,3 +1,10 @@
-<h2 id="title">Welcome to Ember</h2>
-
-{{outlet}}
+<KioskBoard @keysJsonUrl="turkish-keys.json" />
+<KioskBoard @keysArrayOfObjects={{array (hash 0='A' 1='B' 2='C') (hash 0='D' 1='E' 2='F') (hash 0='G' 1='H' 2='I')}} />
+<KioskBoard
+  @type="text-field"
+  @keysArrayOfObjects={{array (hash 0='A' 1='B' 2='C') (hash 0='D' 1='E' 2='F') (hash 0='G' 1='H' 2='I')}}
+/>
+<KioskBoard
+  @type="text-area"
+  @keysArrayOfObjects={{array (hash 0='A' 1='B' 2='C') (hash 0='D' 1='E' 2='F') (hash 0='G' 1='H' 2='I')}}
+/>

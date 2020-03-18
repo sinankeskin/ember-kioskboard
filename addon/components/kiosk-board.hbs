@@ -1,0 +1,15 @@
+{{#if this.textField}}
+  <Input
+    class="ember-kioskboard-textfield"
+    ...attributes
+    {{did-insert this._initializeOptions}}
+    {{did-update this._updateOptions}}
+  />
+{{else}}
+  <Textarea
+    class="ember-kioskboard-textarea"
+    ...attributes
+    {{did-insert this._initializeOptions}}
+    {{did-update this._updateOptions}}
+  />
+{{/if}}
