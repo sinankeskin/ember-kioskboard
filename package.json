@@ -8,9 +8,9 @@
     "kioskboard",
     "virtual keyboard"
   ],
-  "repository": "",
+  "repository": "https://github.com/sinankeskin/ember-kioskboard",
   "license": "MIT",
-  "author": "",
+  "author": "Sinan Keskin <sinan@kesk.in> (https://kesk.in)",
   "directories": {
     "doc": "doc",
     "test": "tests"
