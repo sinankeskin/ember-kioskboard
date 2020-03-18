@@ -1,9 +1,12 @@
 {
   "name": "ember-kioskboard",
   "version": "0.0.1",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Ember addon for KioskBoard virtual kiosk keyboard library.",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "kiosk",
+    "kioskboard",
+    "virtual keyboard"
   ],
   "repository": "",
   "license": "MIT",
