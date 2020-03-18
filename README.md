@@ -1,6 +1,6 @@
 # ember-kioskboard
 
-Ember addon for [KioskBoard](https://wakirin.github.io/Lightpick/) virtual kiosk keyboard library.
+Ember addon for [KioskBoard](https://furcan.github.io/KioskBoard/) virtual kiosk keyboard library.
 
 ![screenshot](https://raw.githubusercontent.com/furcan/KioskBoard/master/docs/github-cover.png)
 
