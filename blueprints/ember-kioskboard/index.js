@@ -14,9 +14,9 @@ module.exports = {
       fs.mkdirSync('public');
     }
 
-    const languages = ['english', 'french', 'german', 'spanish', 'turkish'];
+    const languages = ['english', 'french', 'german', 'spanish', 'turkish', 'hungarian'];
 
-    languages.forEach(language => {
+    languages.forEach((language) => {
       const inputFile = path.join('node_modules', 'kioskboard', 'dist', `kioskboard-keys-${language}.json`);
 
       const outputFile = path.join('public', `${language}-keys.json`);
@@ -24,10 +24,10 @@ module.exports = {
       if (!fs.existsSync(outputFile)) {
         this.ui.writeLine(`Created ${outputFile}`);
 
-        return fs.copyFile(inputFile, outputFile, err => {
+        return fs.copyFile(inputFile, outputFile, (err) => {
           if (err) throw err;
         });
       }
     });
-  }
+  },
 };
