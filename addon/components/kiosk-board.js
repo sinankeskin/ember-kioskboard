@@ -1,10 +1,11 @@
+import { action, computed, get } from '@ember/object';
+import { isBlank, isEqual } from '@ember/utils';
+
+import Component from '@glimmer/component';
+import { assign } from '@ember/polyfills';
 /* globals KioskBoard */
 import { getOwner } from '@ember/application';
-import { assign } from '@ember/polyfills';
-import { action, computed, get } from '@ember/object';
 import { isPresent } from '@ember/utils';
-import { isBlank, isEqual } from '@ember/utils';
-import Component from '@glimmer/component';
 
 export default class KioskBoardComponent extends Component {
   @computed
@@ -36,7 +37,7 @@ export default class KioskBoardComponent extends Component {
   _defaultOptions() {
     return {
       keysArrayOfObjects: null,
-      keysJsonUrl: null
+      keysJsonUrl: null,
     };
   }
 
@@ -58,12 +59,13 @@ export default class KioskBoardComponent extends Component {
       'keysFontFamily',
       'keysFontSize',
       'keysFontWeight',
-      'keysIconSize'
+      'keysIconSize',
+      'autoScroll',
     ];
 
     const options = {};
 
-    defaults.forEach(option => {
+    defaults.forEach((option) => {
       if (isPresent(get(this.args, option))) {
         options[option] = get(this.args, option);
       }
