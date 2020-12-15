@@ -5,42 +5,29 @@ import { isBlank, isEqual } from '@ember/utils';
 
 import Component from '@glimmer/component';
 import { assign } from '@ember/polyfills';
+import { cached } from '@glimmer/tracking';
 import { getOwner } from '@ember/application';
 import { isPresent } from '@ember/utils';
 
 export default class KioskBoardComponent extends Component {
+  @cached
   get _config() {
     const config = getOwner(this).resolveRegistration('config:environment') || {};
 
     return config['ember-kioskboard'] || {};
   }
 
+  @cached
   get _options() {
     const options = this._defaultOptions();
 
-    assign(options, this._config, this._componentOptions());
+    assign(options, this._config, this._componentOptions);
 
     return options;
   }
 
-  constructor() {
-    super(...arguments);
-
-    if (isBlank(this.args.type) || isEqual(this.args.type, 'text-field')) {
-      this.textField = true;
-    } else {
-      this.textField = false;
-    }
-  }
-
-  _defaultOptions() {
-    return {
-      keysArrayOfObjects: null,
-      keysJsonUrl: null,
-    };
-  }
-
-  _componentOptions() {
+  @cached
+  get _componentOptions() {
     const defaults = [
       'keysArrayOfObjects',
       'keysJsonUrl',
@@ -71,6 +58,23 @@ export default class KioskBoardComponent extends Component {
     });
 
     return options;
+  }
+
+  _defaultOptions() {
+    return {
+      keysArrayOfObjects: null,
+      keysJsonUrl: null,
+    };
+  }
+
+  constructor() {
+    super(...arguments);
+
+    if (isBlank(this.args.type) || isEqual(this.args.type, 'text-field')) {
+      this.textField = true;
+    } else {
+      this.textField = false;
+    }
   }
 
   @action
