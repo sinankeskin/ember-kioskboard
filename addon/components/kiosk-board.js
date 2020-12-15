@@ -1,21 +1,20 @@
-import { action, computed, get } from '@ember/object';
+/* globals KioskBoard */
+
+import { action, get } from '@ember/object';
 import { isBlank, isEqual } from '@ember/utils';
 
 import Component from '@glimmer/component';
 import { assign } from '@ember/polyfills';
-/* globals KioskBoard */
 import { getOwner } from '@ember/application';
 import { isPresent } from '@ember/utils';
 
 export default class KioskBoardComponent extends Component {
-  @computed
   get _config() {
     const config = getOwner(this).resolveRegistration('config:environment') || {};
 
     return config['ember-kioskboard'] || {};
   }
 
-  @computed('_config')
   get _options() {
     const options = this._defaultOptions();
 
