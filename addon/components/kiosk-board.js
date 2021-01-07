@@ -12,7 +12,8 @@ import { isPresent } from '@ember/utils';
 export default class KioskBoardComponent extends Component {
   @cached
   get _config() {
-    const config = getOwner(this).resolveRegistration('config:environment') || {};
+    const config =
+      getOwner(this).resolveRegistration('config:environment') || {};
 
     return config['ember-kioskboard'] || {};
   }

@@ -14,10 +14,22 @@ module.exports = {
       fs.mkdirSync('public');
     }
 
-    const languages = ['english', 'french', 'german', 'spanish', 'turkish', 'hungarian'];
+    const languages = [
+      'english',
+      'french',
+      'german',
+      'spanish',
+      'turkish',
+      'hungarian',
+    ];
 
     languages.forEach((language) => {
-      const inputFile = path.join('node_modules', 'kioskboard', 'dist', `kioskboard-keys-${language}.json`);
+      const inputFile = path.join(
+        'node_modules',
+        'kioskboard',
+        'dist',
+        `kioskboard-keys-${language}.json`
+      );
 
       const outputFile = path.join('public', `${language}-keys.json`);
 
