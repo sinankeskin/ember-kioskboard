@@ -80,13 +80,6 @@ export default class KioskBoardComponent extends Component {
 
   @action
   _initializeOptions(element) {
-    KioskBoard.Init(this._options);
-
-    KioskBoard.Run(`#${element.id}`);
-  }
-
-  @action
-  _updateOptions() {
-    KioskBoard.Merge(this._options);
+    KioskBoard.Run(element, this._options);
   }
 }
