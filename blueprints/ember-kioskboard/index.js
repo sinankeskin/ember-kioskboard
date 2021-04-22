@@ -18,9 +18,10 @@ module.exports = {
       'english',
       'french',
       'german',
+      'hungarian',
+      'russian',
       'spanish',
       'turkish',
-      'hungarian',
     ];
 
     languages.forEach((language) => {
