@@ -5,7 +5,7 @@ import { isBlank, isEqual } from '@ember/utils';
 
 import Component from '@glimmer/component';
 import { assign } from '@ember/polyfills';
-import { cached } from '@glimmer/tracking';
+import { cached } from 'tracked-toolbox';
 import { getOwner } from '@ember/application';
 import { isPresent } from '@ember/utils';
 
