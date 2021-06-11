@@ -1,6 +1,6 @@
 {
   "name": "ember-kioskboard",
-  "version": "2.1.11",
+  "version": "2.1.12",
   "description": "Ember addon for KioskBoard virtual kiosk keyboard library.",
   "keywords": [
     "ember-addon",
