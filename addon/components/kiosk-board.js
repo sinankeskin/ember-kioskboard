@@ -32,7 +32,8 @@ export default class KioskBoardComponent extends Component {
     const defaults = [
       'keysArrayOfObjects',
       'keysJsonUrl',
-      'specialCharactersObject',
+      'keysSpecialCharsArrayOfStrings',
+      'keysNumpadArrayOfNumbers',
       'language',
       'theme',
       'capsLockActive',
@@ -80,6 +81,6 @@ export default class KioskBoardComponent extends Component {
 
   @action
   _initializeOptions(element) {
-    KioskBoard.Run(element, this._options);
+    KioskBoard.run(element, this._options);
   }
 }
