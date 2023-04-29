@@ -6,10 +6,9 @@ Ember addon for [KioskBoard](https://furcan.github.io/KioskBoard/) virtual kiosk
 
 ## Compatibility
 
-* Ember.js v3.28 or above
-* Ember CLI v3.28 or above
-* Node.js v14 or above
-
+- Ember.js v3.28 or above
+- Ember CLI v3.28 or above
+- Node.js v14 or above
 
 ## Installation
 
@@ -95,14 +94,18 @@ ENV['ember-kioskboard'] = {
 Default configuration
 
 ```handlebars
-<KioskBoard @keysJsonUrl="english-keys.json" />
+<KioskBoard @keysJsonUrl='english-keys.json' />
 ```
 
 All default configuration parameters
 
 ```handlebars
 <KioskBoard
-  @keysArrayOfObjects={{array (hash 0='A' 1='B' 2='C') (hash 0='D' 1='E' 2='F') (hash 0='G' 1='H' 2='I')}}
+  @keysArrayOfObjects={{array
+    (hash 0='A' 1='B' 2='C')
+    (hash 0='D' 1='E' 2='F')
+    (hash 0='G' 1='H' 2='I')
+  }}
   @specialCharactersObject={{null}}
   @language='en'
   @theme='light'
